@@ -1,14 +1,15 @@
+import router from "./router"
 import './App.css'
+import { RouterProvider } from "react-router-dom"
+import { ChakraProvider } from "@chakra-ui/react"
 
 function App() {
 
   return (
-    <>
-      <div className='App'>
-        <h1>Hello, Tailwind CSS in React JS</h1>
-      </div> 
-    </>
-  )
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
+  );
 }
 
 export default App
